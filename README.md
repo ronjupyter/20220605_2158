@@ -10,7 +10,7 @@
 Private Sub Worksheet_Change(ByVal Target As Range)
 
 If Intersect(Target, Range("A21")) Is Nothing Then
-    'pass
+    'pass or ActiveWorkbook.Connections("Query - filter_prov").Refresh
 Else
 	With ActiveWorkbook
 	    For lCnt = 1 To .Connections.Count
